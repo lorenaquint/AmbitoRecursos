@@ -9,9 +9,18 @@ namespace AmbitoRecursos
 {
 	public partial class MainPage : ContentPage
 	{
+        
+      
 		public MainPage()
 		{
 			InitializeComponent();
 		}
+
+
+        //private void btnGuardar_OnClicked(Object sender, EventArgs e)
+        //    {
+        //    DisplayAlert("Probando", "Esto es Clic desde XAML", "Aceptar");
+        //    }
+        
 	}
 }

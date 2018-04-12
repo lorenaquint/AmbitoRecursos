@@ -3,9 +3,47 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AmbitoRecursos"
              x:Class="AmbitoRecursos.MainPage">
-
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
+    <!--<ContentPage.Resources>-->
+        <!--<ResourceDictionary>
+            <Color x:Key ="MiColor">Red</Color>
+            <Color x:Key ="MiColor">Red</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.Resources>
+            <ResourceDictionary>
+                <Color x:Key ="MiColor">Blue</Color>
+                <FontAttributes x:Key ="Negrita">Bold</FontAttributes>
+                
+            </ResourceDictionary>
+        </Grid.Resources>
+        <Button  x:Name="btnSave"
+                Text="Guardar"
+                 FontAttributes=" {StaticResource Negrita}"
+               VerticalOptions="CenterAndExpand"
+                BackgroundColor=" {StaticResource MiColor}"
+                ></Button>
+    </Grid>-->
+    <StackLayout Margin="10,20,0,0">
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Style x:Key="LabelNormalStyle" TargetType="Label">
+                    <Setter Property="TextColor" Value="{StaticResource NormalTextColor}" />
+                </Style>
+                <Style x:Key="MediumBoldText" TargetType="Button">
+                    <Setter Property="FontSize" Value="Medium" />
+                    <Setter Property="FontAttributes" Value="Bold" />
+                </Style>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+        <Label Text="ResourceDictionary" Style="{StaticResource LabelPageHeadingStyle}" />
+        <Label Text="Recursos XAML son definiciones de objetos que se pueden usar más de una vez."
+           Margin="10,20,10,0"
+           Style="{StaticResource LabelNormalStyle}" />
+        <Button Text="Ingresar"
+            TextColor="{StaticResource NormalTextColor}"
+            Margin="0,20,0,0"
+            HorizontalOptions="Center"
+            Style="{StaticResource MediumBoldText}" />
+    </StackLayout>
 </ContentPage>
